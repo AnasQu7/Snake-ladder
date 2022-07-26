@@ -1,0 +1,279 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#board{
+    width:  1200.2px;
+    height: 745.52px;
+    position: relative;
+   
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0px;
+    border-radius: 20px;
+    background-size: cover;
+    padding: 50px;
+   
+    
+}
+#sn1{
+    z-index: 50;
+    position: absolute;
+   width: 130px;
+   top: 230px;
+   right: 350px;
+    
+    
+}
+#sn2{
+    z-index: 56;
+    width: 150px;
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+    /* height: 500px; */
+}
+#sn3{
+    z-index: 40;
+    height: 700px;
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    transform: rotate(15deg);
+    transform: scaley(-1)
+}
+#sn4{
+    z-index: 50;
+    position: absolute;
+    top: 320px;
+    left: 750px;
+    transform: rotate(-90deg);
+}
+#sn5{
+    z-index: 10;
+    position: absolute;
+    width: 250px;
+    right: 550px;
+    top: 100px;
+    transform: rotate(-45deg);
+}
+#ld1{
+    z-index: 98;
+    position: absolute;
+    width: 100px;
+    height: 350px;
+    bottom: 135px;
+    left: 245px;
+    transform: rotate(-26deg);
+}
+#ld2{
+    z-index: 28;
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    top: 50px;
+    left: 720px;
+    transform: rotate(15deg);
+}
+#ld3{
+    z-index: 98;
+    position: absolute;
+    width: 65px;
+    height: 270px;
+    top: 130px;
+    right: 250px;
+    transform: rotate(23deg);
+}
+#ld4{
+    z-index: 38;
+    position: absolute;
+    width: 70px;
+    height: 675px;
+    bottom: 115px;
+    right: 675px;
+    transform: rotate(-23deg);
+}
+.boxes{
+    text-align: center;
+    border: 1px solid;
+    z-index: 0;
+}
+.base{
+    text-align: center;
+    background-color: rgb(164, 26, 26);
+    color: aliceblue;
+    background-image: url("./images/dicebackground3.jpg");
+    border: 1px solid black;
+    z-index: 0;
+    
+    position: relative;
+}
+.type1{
+    position: relative;
+    background-color: rgb(211, 250, 250);
+    background-image: url("./images/dicebackground2.jpg");
+    background-size: contain;
+    border: 1px solid black;
+    z-index: 0;
+    transition: 1s;
+}
+.type2{
+    position: relative;
+    background-color:#03080b;
+    background-image: url("./images/dicebackground.jpg");
+    background-size: contain;
+    color: white;
+    border: 1px solid black;
+    z-index: 0;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+    background-color: transparent;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+/* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: rgba(0, 0, 0, 0.345);
+    color: black;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: rgba(0, 0, 0, 0.096);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    border: 1px solid white;
+    font-family: cursive;
+}
+  .flip-box-back>p{
+      width: 600px;
+    margin: auto;
+    text-align: left;
+    font-size: larger;
+  }
+  #play{
+      margin-top:100px;
+      height: 50px;
+      width: 100px;
+    font-size: larger;
+    border: 2px solid whitesmoke;
+    color: white;
+    border-radius: 20px;
+    background-color: transparent;
+  }
+  #play:hover {
+      color: #dee2e6;
+      background: #2195f352;
+    box-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
+    /* transition-delay: 1s; */
+}
+
+
+
+ #diceDisplay{
+    color: aqua;
+    font-size: 100px;
+    
+ }
+ #container{
+     
+     display: flex;
+     width: 1600px;
+     margin: auto;
+     border-radius: 50px;
+     justify-content: center;
+     background-image: url("https://fixthephoto.com/images/content/dark-wood-texture-41613649238.jpg");
+    }
+    #dice{
+        width: 200px;
+        text-align: center;
+        border: 1px solid black;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50px;
+        background-image: url("./images/dicebackground.jpg");
+        background-size: contain;
+
+        overflow: hidden;
+    }
+    #roll{
+        display: block;
+        border-radius: 0px 0px 50px 50px;
+        /* background-image: url("./images/dicebackground3.jpg"); */
+        background-image: url("./images/dicebackground2.jpg");
+        background-size: cover;
+        width: 200px ;
+        height: 200px;
+        font-size: 40px;
+        position: absolute;
+        bottom: 0px;
+        
+    }
+    #box1{
+        border-radius: 0px 0px 0px 20px;
+    }
+    #box10{
+        border-radius: 0px 0px 20px 0px;
+
+    }
+    #box100{
+        border-radius:20px 0px 0px 0px;
+
+    }
+    #box91{
+        border-radius: 0px 20px 0px 0px;
+
+    }
+    #dicegif{
+       width: 100%;
+      margin-top: 260px;
+    }
+    .spot{
+        position: absolute;
+        bottom: 2px;
+        right: 20px;
+        z-index: 1000;
+       
+        width: 50px;
+    }

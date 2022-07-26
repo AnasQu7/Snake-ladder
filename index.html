@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+<body>
+
+    <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="./icon.png" alt="Paris" style="width:900px;height:600px">
+          </div>
+          <div class="flip-box-back">
+            <h2>SNAKE AND LADDER</h2>
+            <h3>Instructions</h3>
+            <p>
+                1.Each player begins with a token or figure on the ‘1’ square in the bottom left-hand corner of the board.
+                <br> 2.Players take turn rolling a die and moving their token in accordance with the number they roll. If they roll a one they move one square; if they roll a two they move two squares, and so on.
+                <br> 3.If a player lands on the lower end of a ladder, they ‘climb’ that ladder to the square that features its top end.
+                <br> 4.Conversely, if players land on the higher-numbered square of a snake, they fall down to its lowest-numbered square. If a player rolls a six, they get another roll after moving their token. To speed up the game, players can use two dice.
+                <br> 5.Whoever reaches the last square first is the winner.
+            </p>
+            <button id="play">PLAY</button> 
+          </div>
+        </div>
+      </div>
+    
+        <div id="container">
+    
+    <div id="board">
+      
+      <img src="./snake/1.png" id="sn1" alt="">
+      <img src="./snake/2.png" id="sn2" alt="">
+      <img src="./snake/3.png" id="sn3" alt="">
+      <img src="./snake/4.png" id="sn4" alt="">
+      <img src="./snake/5.png" id="sn5" alt="">
+      <img src="./ladders/1.png" id="ld1" alt="">
+      <img src="./ladders/2.png" id="ld2" alt="">
+      <img src="./ladders/3.png" id="ld3" alt="">
+      <img src="./ladders/4.png" id="ld4" alt="">
+    </div>
+   
+    <div id="dice">
+       <h2 id="diceDisplay"></h2>
+       
+      <button id="roll">roll</button>
+    </div>
+
+    </div>
+    <audio src="./audio/event.mp3" id="event"></audio>
+    <audio src="./audio/failure notification.mp3" id="fail"></audio>
+    <audio src="./audio/steps.mp3" id="step"></audio>
+    <audio src="./audio/ladder.mp3" id="ladder"></audio>
+    <audio src="./audio/ohno.mp3" id="snake"></audio>
+    <audio src="./audio/Congratulations Sms.mp3" id="won"></audio>
+</body>
+</html>
+<script src="./index.js"></script>
