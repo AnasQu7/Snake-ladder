@@ -43,11 +43,28 @@ document.getElementById("play").addEventListener("click", () => {
 });
 
 document.getElementById("roll").addEventListener("click", () => {
+  document.getElementById("roll").textContent="WAIT!"
+  document.getElementById("roll").disabled=true
+  
+  var ab = 1
   setTimeout(() => {
-    let n = Math.ceil(Math.random() * 6);
-    document.getElementById("diceDisplay").textContent = n;
-    move(n);
-  }, 100);
+    let n;
+    let time = setInterval(()=>{
+       n = Math.ceil(Math.random() * 6);
+      document.getElementById("diceImg").src = `./images/dice/${n}.jpg`
+      ab++;
+      let myAudio = document.querySelector("#diceRoll");
+      myAudio.play();
+      if(ab == 15){
+        clearInterval(time);
+  
+        // document.getElementById("diceDisplay").textContent = n;
+        move(n);
+      }
+    },200)
+    console.log(ab)
+    
+  }, 500);
 });
 
 
@@ -57,7 +74,9 @@ var tem;
 var clean;
 var free = 0;
 function move(n) {
+  let count = 0;
   if (n === 1 && free === 0) {
+    count++;
     tem = 1;
     free++;
     let id = `box${tem}`;
@@ -77,6 +96,7 @@ function move(n) {
   } else if (free !== 0 && tem+n <=100) {
     var z;
     for (let i = 1; i <= n; i++) {
+      count++;
         z = 700* i
       setTimeout(() => {
         if (clean !== undefined) {
@@ -104,7 +124,6 @@ function move(n) {
         if(tem===15){
             tem=97;
             teleport(tem)
-            tem++
         }
         if(tem===18){
             tem=59;
@@ -143,11 +162,16 @@ function move(n) {
             myAudio.play(); 
         }
     },z+700)
-    
+   
   } else {
     let myAudio = document.querySelector("#fail");
     myAudio.play();
   }
+
+  setTimeout(()=>{
+    document.getElementById("roll").disabled=false;
+    document.getElementById("roll").textContent="Roll"
+  },(700*count)+100)
 }
 
 function teleport(){
@@ -156,7 +180,7 @@ function teleport(){
         console.log(rem);
         let x = document.getElementById(rem);
         x.remove();
-      
+        count++;
         setTimeout(()=>{
 
         let id = `box${tem}`;
@@ -181,7 +205,7 @@ function snakeTeleport(){
         x.remove();
       }
     setTimeout(()=>{
-
+      count++;
         let id = `box${tem}`;
         let img = document.createElement("img");
         img.src = "./images/spot1.png";
@@ -194,4 +218,6 @@ function snakeTeleport(){
         let myAudio = document.querySelector("#snake");
         myAudio.play();
     },400)
+
+
 }

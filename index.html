@@ -25,7 +25,14 @@
                 <br> 4.Conversely, if players land on the higher-numbered square of a snake, they fall down to its lowest-numbered square. If a player rolls a six, they get another roll after moving their token. To speed up the game, players can use two dice.
                 <br> 5.Whoever reaches the last square first is the winner.
             </p>
-            <button id="play">PLAY</button> 
+            <select class="btn">
+              <option value="">select players</option>
+              <option value="1">single Player</option>
+              <option value="2">Two Players</option>
+              <option value="3">Three Players</option>
+              <option value="4">Four Players</option>
+            </select >
+            <button id="play" class="btn">PLAY</button> 
           </div>
         </div>
       </div>
@@ -46,9 +53,9 @@
     </div>
    
     <div id="dice">
-       <h2 id="diceDisplay"></h2>
-       
-      <button id="roll">roll</button>
+      <img id="diceImg" src="" alt="">
+      <!-- <h2 id="diceDisplay"></h2> -->
+      <button id="roll">Roll</button>
     </div>
 
     </div>
@@ -58,6 +65,7 @@
     <audio src="./audio/ladder.mp3" id="ladder"></audio>
     <audio src="./audio/ohno.mp3" id="snake"></audio>
     <audio src="./audio/Congratulations Sms.mp3" id="won"></audio>
+    <audio src="./audio/Dice Roll.mp3" id="diceRoll"></audio>
 </body>
 </html>
 <script src="./index.js"></script>

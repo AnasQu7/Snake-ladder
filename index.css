@@ -172,17 +172,17 @@ body{
     background-color: rgba(0, 0, 0, 0.345);
     color: black;
     padding: 5px;
-    border: 1px solid whitesmoke;
+    border: 1px solid;
     border-radius: 20px;
   }
   
   /* Style the back side */
   .flip-box-back {
     background-color: rgba(0, 0, 0, 0.096);
-    color: white;
+    color: black;
     transform: rotateY(180deg);
     border-radius: 20px;
-    border: 1px solid white;
+    border: 1px solid;
     font-family: cursive;
 }
   .flip-box-back>p{
@@ -190,21 +190,23 @@ body{
     margin: auto;
     text-align: left;
     font-size: larger;
+    color: black;
   }
-  #play{
+  .btn{
       margin-top:100px;
       height: 50px;
-      width: 100px;
+      width: 150px;
+      text-align: center;
     font-size: larger;
-    border: 2px solid whitesmoke;
-    color: white;
+    border: 2px solid;
+    color: black;
     border-radius: 20px;
     background-color: transparent;
   }
-  #play:hover {
-      color: #dee2e6;
-      background: #2195f352;
-    box-shadow: 0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
+  .btn:hover {
+      color: black;
+      background: #f0c1a192;
+    box-shadow: 0 0 10px #f0c1a1, 0 0 20px #f0c1a1, 0 0 40px #f0c1a1;
     /* transition-delay: 1s; */
 }
 
@@ -250,6 +252,17 @@ body{
         bottom: 0px;
         
     }
+    #roll:hover{
+        transform: scale(1.1);
+        
+        transition: 1s;
+         color: maroon;
+        
+    }
+    #diceImg{
+        margin-top: 200px;
+        width: 100%;
+    }
     #box1{
         border-radius: 0px 0px 0px 20px;
     }
@@ -274,6 +287,5 @@ body{
         bottom: 2px;
         right: 20px;
         z-index: 1000;
-       
         width: 50px;
     }
